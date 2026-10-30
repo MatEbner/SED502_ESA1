@@ -1,13 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <meta
+      name="description"
+      content="Ein kleines Fotografie-Portfolio mit ausgewählten Bildern und Kamera-Informationen."
+    />
+    <title>Fotografie-Portfolio</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <a href="#start">Fotografie-Portfolio</a>
+      <nav aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#portfolio-info">Über das Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="start">
+      <section id="galerie" aria-labelledby="galerie-titel">
+        <h1 id="galerie-titel">Fotografie-Portfolio</h1>
+        <p>
+          Motive und die Geschichten hinter der Kamera. Die Bilder sind von
+          <a href="https://pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a>.
+        </p>
+
+        <article></article>
+      </section>
+
+      <aside id="portfolio-info" aria-labelledby="portfolio-info-titel">
+        <h2 id="portfolio-info-titel">Über dieses Portfolio</h2>
+        <p>Eine Sammlung persönlicher Fotografien aus Landschaft, Natur und Alltag.</p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Fotografie-Portfolio</p>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
