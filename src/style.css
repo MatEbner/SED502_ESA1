@@ -1,9 +1,209 @@
 :root {
-  font-family: Arial, sans-serif;
+  --farbe-navy: #102a43;
+  --farbe-hintergrund: #f1f5f9;
+  --farbe-flaeche: #ffffff;
+  --farbe-text: #102a43;
+  --farbe-sekundaer: #3e566e;
+  --farbe-linie: #cbd6e2;
+
+  color: var(--farbe-text);
+  background-color: var(--farbe-hintergrund);
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--farbe-navy);
+  outline-offset: 4px;
+}
+
+header {
+  align-items: center;
+  background-color: var(--farbe-navy);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem max(1.25rem, calc((100% - 1200px) / 2));
+}
+
+header > a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover,
+header > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 3rem 1.25rem;
+}
+
+#galerie > h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+
+#galerie > p {
+  color: var(--farbe-sekundaer);
+  font-size: 1.1rem;
+  margin: 0 0 2rem;
+  max-width: 42rem;
+}
+
+.foto-raster {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.foto-karte {
+  background-color: var(--farbe-flaeche);
+  border: 1px solid var(--farbe-linie);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.foto-karte__bild {
+  aspect-ratio: 3 / 2;
+  background-color: var(--farbe-linie);
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.foto-karte__bild img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.motiv-tag {
+  background-color: var(--farbe-navy);
+  border-radius: 999px;
+  bottom: 0.75rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  left: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  position: absolute;
+}
+
+.foto-karte__inhalt {
+  padding: 1.25rem;
+}
+
+.foto-karte h2 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+.foto-beschreibung {
+  color: var(--farbe-sekundaer);
+  margin: 0;
+}
+
+.fotograf {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.kamera-daten {
+  border-top: 1px solid var(--farbe-linie);
+  display: grid;
+  gap: 0.35rem 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding-top: 1rem;
+}
+
+.kamera-daten dt {
+  color: var(--farbe-sekundaer);
+  font-size: 0.8rem;
+}
+
+.kamera-daten dd {
+  font-weight: 700;
+  margin: 0.1rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+aside {
+  background-color: var(--farbe-linie);
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+
+aside h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+aside p {
+  margin: 0;
+}
+
+footer {
+  background-color: var(--farbe-navy);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  main {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
 }
