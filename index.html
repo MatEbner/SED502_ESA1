@@ -28,16 +28,25 @@
           <a href="https://pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a>.
         </p>
 
-        <section
-          id="foto-raster"
-          class="foto-raster"
-          aria-label="Ausgewählte Fotografien"
-        ></section>
+        <section class="filter-bereich" aria-labelledby="filter-titel">
+          <h2 id="filter-titel">Galerie nach Motiv filtern</h2>
+          <ul id="filter-buttons" class="filter-buttons" aria-label="Motiv auswählen">
+            <li><button type="button" data-motiv="alle" aria-pressed="true">Alle</button></li>
+            <li><button type="button" data-motiv="Landschaft" aria-pressed="false">Landschaft</button></li>
+            <li><button type="button" data-motiv="Architektur" aria-pressed="false">Architektur</button></li>
+            <li><button type="button" data-motiv="Portrait" aria-pressed="false">Portrait</button></li>
+          </ul>
+        </section>
+
+        <p id="ergebnis" class="ergebnis" aria-live="polite"></p>
+        <section id="foto-raster" class="foto-raster" aria-label="Ausgewählte Fotografien"></section>
       </section>
 
       <aside id="portfolio-info" aria-labelledby="portfolio-info-titel">
         <h2 id="portfolio-info-titel">Über dieses Portfolio</h2>
-        <p>Eine Sammlung persönlicher Fotografien aus Landschaft, Natur und Alltag.</p>
+        <p>Eine Sammlung persönlicher Fotografien aus Landschaft, Architektur und Portrait.</p>
+        <h3>Statistik der Anzeige</h3>
+        <p id="statistik-anzahl"></p>
       </aside>
     </main>
 
